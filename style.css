@@ -15,10 +15,6 @@ body{
   }
   .jumbotron {
       margin-bottom: 0px;
-      background-image: url(https://cdn.pixabay.com/photo/2017/08/05/21/42/fireworks-2585843_960_720.jpg);
-      background-position: 0% 25%;
-      background-size: cover;
-      background-repeat: no-repeat;
       color: white;
       text-shadow: black 0.3em 0.3em 0.3em;
   }
