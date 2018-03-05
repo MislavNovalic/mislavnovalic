@@ -1,6 +1,7 @@
 
  <head>
   <link rel="stylesheet" href="css/calculator.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
@@ -11,29 +12,29 @@
       <form>
         <input type="text" id="display" disabled>
         <br>
-        <input type="button" value="C" id="keys" onclick='toScreen("c")'>
-        <input type="button" value="CE" id="keys" onclick='backspace()'>
-        <input type="button" value="X/2" id="keys" onclick='divisionby2("")'>
-        <input type="button" value="+" id="keys" onclick='toScreen("+")'>
+        <input type="button" class="btn btn-primary" value="C" id="keys" onclick='toScreen("c")'>
+        <input type="button" class="btn btn-primary" value="CE" id="keys" onclick='backspace()'>
+        <input type="button" class="btn btn-primary" value="X/2" id="keys" onclick='divisionby2("")'>
+        <input type="button" class="btn btn-primary" value="+" id="keys" onclick='toScreen("+")'>
         <br>
-        <input type="button" value="9" id="keys" onclick='toScreen("9")'>
-        <input type="button" value="8" id="keys" onclick='toScreen("8")'>
-        <input type="button" value="7" id="keys" onclick='toScreen("7")'>
-        <input type="button" value="-" id="keys" onclick='toScreen("-")'>
+        <input type="button" class="btn btn-primary" value="9" id="keys" onclick='toScreen("9")'>
+        <input type="button" class="btn btn-primary" value="8" id="keys" onclick='toScreen("8")'>
+        <input type="button" class="btn btn-primary" value="7" id="keys" onclick='toScreen("7")'>
+        <input type="button" class="btn btn-primary" value="-" id="keys" onclick='toScreen("-")'>
         <br>
-        <input type="button" value="6" id="keys" onclick='toScreen("6")'>
-        <input type="button" value="5" id="keys" onclick='toScreen("5")'>
-        <input type="button" value="4" id="keys" onclick='toScreen("4")'>
-        <input type="button" value="*" id="keys" onclick='toScreen("*")'>
+        <input type="button" class="btn btn-primary" value="6" id="keys" onclick='toScreen("6")'>
+        <input type="button" class="btn btn-primary" value="5" id="keys" onclick='toScreen("5")'>
+        <input type="button" class="btn btn-primary" value="4" id="keys" onclick='toScreen("4")'>
+        <input type="button" class="btn btn-primary" value="*" id="keys" onclick='toScreen("*")'>
         <br>
-        <input type="button" value="3" id="keys" onclick='toScreen("3")'>
-        <input type="button" value="2" id="keys" onclick='toScreen("2")'>
-        <input type="button" value="1" id="keys" onclick='toScreen("1")'>
-        <input type="button" value="/" id="keys" onclick='toScreen("/")'>
+        <input type="button" class="btn btn-primary" value="3" id="keys" onclick='toScreen("3")'>
+        <input type="button" class="btn btn-primary" value="2" id="keys" onclick='toScreen("2")'>
+        <input type="button" class="btn btn-primary" value="1" id="keys" onclick='toScreen("1")'>
+        <input type="button" class="btn btn-primary" value="/" id="keys" onclick='toScreen("/")'>
         <br>
-        <input type="button" value="0" id="keys" onclick='toScreen("0")'>
-        <input type="button" value="." id="keys" onclick='toScreen(".")'>
-        <input type="button" value="=" id="equal" onclick='equals("")'>
+        <input type="button" class="btn btn-primary" value="0" id="keys" onclick='toScreen("0")'>
+        <input type="button" class="btn btn-primary" value="." id="keys" onclick='toScreen(".")'>
+        <input type="button" class="btn btn-success" value="=" id="equal" onclick='equals("")'>
       </form>
       <script src="js/index.js"></script>
     </div>  
