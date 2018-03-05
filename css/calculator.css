@@ -33,17 +33,17 @@ body{
     font: 20px bold;
   }
   #keys{
-    width: 70px;
+    width: 62px;
     height: 35px;
-    margin: 8px;
+    margin: 5px;
     box-shadow: 0px 0px 1px 2px;
     border-radius: 6px;
     outline: none;
   }
   #equal{
-    width: 120px;
+    width: 100px;
     height: 45px;
-    margin: 8px;
+    margin: 5px;
     box-shadow: 0px 0px 1px 2px;
     border-radius: 4px;
     outline: none;
