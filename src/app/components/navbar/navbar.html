@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" id="sideNav">
+  <a class="navbar-brand" href="#page-top" (click)="scrollToSection('about'); $event.preventDefault()">
+    <span class="d-block d-lg-none">Menu</span>
+    <span class="d-none d-lg-block">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2" [src]="profileImage" alt="Profile picture">
+    </span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#about" (click)="scrollToSection('about'); $event.preventDefault()">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education" (click)="scrollToSection('education'); $event.preventDefault()">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Work" (click)="scrollToSection('Work'); $event.preventDefault()">Work</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills" (click)="scrollToSection('skills'); $event.preventDefault()">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#interests" (click)="scrollToSection('interests'); $event.preventDefault()">Interests</a>
+      </li>
+    </ul>
+  </div>
+</nav>
