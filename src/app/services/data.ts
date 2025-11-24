@@ -46,7 +46,7 @@ export class Data {
   ];
 
   work = {
-    title: 'Some of my work exibited here',
+    title: 'Some of my work exhibited here',
     projects: [
       {
         name: 'Javascript Calculator',
@@ -71,8 +71,8 @@ export class Data {
   };
 
   interests = [
-    'Apart from being a computing engineer and , I enjoy most of my time listening to a music and researching. I enjoy long walks.',
-    'I spend a large amount of my free time exploring the latest technolgy advancements in the web development world.'
+    'Apart from being a computing engineer, I enjoy most of my time listening to music and researching. I enjoy long walks.',
+    'I spend a large amount of my free time exploring the latest technology advancements in the web development world.'
   ];
 
   fiverrWidgetScript = "https://widgets.fiverr.com/api/v1/seller/mislavnovalic?widget_id=0f7deb1a-d933-4c84-9fab-e0a53c794231";
