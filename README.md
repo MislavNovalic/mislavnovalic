@@ -1,59 +1,165 @@
-# AngularResume
+# Mislav Novalić - Resume Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+This is a personal portfolio/resume website built with Angular. It showcases education, work, skills, and interests.
 
-## Development server
+**Live Site:** [https://mislavnovalic.github.io/mislavnovalic/](https://mislavnovalic.github.io/mislavnovalic/)
 
-To start a local development server, run:
+## Features
 
+- ✅ Responsive design with mobile-first approach
+- ✅ Fixed sidebar navigation with smooth scrolling
+- ✅ Bootstrap 4 styling with green theme
+- ✅ Font Awesome icons for social media
+- ✅ Devicon for technology/programming language icons
+- ✅ Sections: About, Education, Work, Skills, Interests
+- ✅ Links to projects (JavaScript Calculator)
+- ✅ Social media integration (Twitter, LinkedIn, GitHub)
+
+## Technology Stack
+
+- **Framework:** Angular 21.0.0
+- **Styling:** Bootstrap 4.6.2, Custom CSS
+- **Icons:** Font Awesome, Devicon
+- **Fonts:** Google Fonts (Ubuntu, Saira Extra Condensed, Open Sans)
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── navbar/          # Navigation sidebar
+│   │   ├── about/           # About section with personal info
+│   │   ├── education/       # Education history
+│   │   ├── work/            # Work/projects showcase
+│   │   ├── skills/          # Programming skills & tools
+│   │   └── interests/       # Personal interests
+│   ├── services/
+│   │   └── data.ts          # Data service for content management
+│   └── ...
+├── assets/
+│   └── img/
+│       └── profile.jpg      # Profile picture
+└── styles.css               # Global styles
+```
+
+## Setup & Installation
+
+### Prerequisites
+
+- Node.js (v20 or higher)
+- npm (v10 or higher)
+- Angular CLI (`npm install -g @angular/cli`)
+
+### Installation Steps
+
+1. Clone the repository:
+```bash
+git clone https://github.com/MislavNovalic/mislavnovalic.git
+cd mislavnovalic
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Open your browser and navigate to `http://localhost:4200/mislavnovalic/`
 
-## Code scaffolding
+## Building for Production
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+To build the project for production:
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+The build artifacts will be stored in the `dist/angular-resume/browser/` directory.
 
-To build the project run:
+## Deployment to GitHub Pages
 
+This project is configured for GitHub Pages deployment with the base href set to `/mislavnovalic/`.
+
+### Manual Deployment
+
+1. Build the project:
 ```bash
-ng build
+ng build --configuration production
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. Copy the contents of `dist/angular-resume/browser/` to the root of your `gh-pages` branch or deploy directory.
 
-## Running unit tests
+3. Ensure GitHub Pages is enabled in your repository settings, pointing to the correct branch.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Automated Deployment (Recommended)
 
-```bash
-ng test
+You can set up GitHub Actions for automated deployment. Create `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/angular-resume/browser
 ```
 
-## Running end-to-end tests
+## Content Management
 
-For end-to-end (e2e) testing, run:
+All content (personal information, education, skills, etc.) is managed in `src/app/services/data.ts`. Edit this file to update:
 
-```bash
-ng e2e
-```
+- Personal information (name, tagline)
+- Social media links
+- Education entries
+- Work/project links
+- Skills and technologies
+- Interests
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Additional Files
 
-## Additional Resources
+The repository also includes:
+- `calculator.html` - JavaScript Calculator demo
+- `bookmakerapp.html` - Bookmaker app demo
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+These files are automatically copied to the build output and are accessible at:
+- `/mislavnovalic/calculator.html`
+- `/mislavnovalic/bookmakerapp.html`
+
+## Contributing
+
+This is a personal portfolio site. All code is free to use, and contributions are welcome.
+
+## License
+
+Free to use and modify.
+
+---
+
+**This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.**
